@@ -1,0 +1,12 @@
+{
+    "name": "onisan",
+    "main": "index.html",
+    "js-flags": "--expose-gc",
+    "window": {
+        "title": "OniSan",
+        "toolbar": false,
+        "width": 816,
+        "height": 624,
+        "icon": "icon/icon.png"
+    }
+}

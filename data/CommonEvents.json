@@ -1,0 +1,7 @@
+[
+null,
+{"id":1,"list":[{"code":101,"indent":0,"parameters":["People1",4,0,2]},{"code":401,"indent":0,"parameters":["You must be the demon, Oni"]},{"code":101,"indent":0,"parameters":["OniFace",0,0,2]},{"code":401,"indent":0,"parameters":["Yes, is there a problem here ? "]},{"code":101,"indent":0,"parameters":["OniFace",0,0,2]},{"code":401,"indent":0,"parameters":["The bar looks like it's been empty for"]},{"code":401,"indent":0,"parameters":["sometime now."]},{"code":101,"indent":0,"parameters":["People1",4,0,2]},{"code":401,"indent":0,"parameters":["Oh yes, we've been having trouble with a "]},{"code":401,"indent":0,"parameters":["rogue.  He's been stealing and wanting some"]},{"code":401,"indent":0,"parameters":["of out money so we keep it closed at all "]},{"code":401,"indent":0,"parameters":["times. "]},{"code":101,"indent":0,"parameters":["People1",4,0,2]},{"code":401,"indent":0,"parameters":["He's been causing us some real problems."]},{"code":101,"indent":0,"parameters":["OniFace",0,0,2]},{"code":401,"indent":0,"parameters":["I'll see what I can do but I'm an Oni, hope"]},{"code":401,"indent":0,"parameters":["you know what it means. "]},{"code":0,"indent":0,"parameters":[]}],"name":"Rogue Mission","switchId":1,"trigger":0},
+{"id":2,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0},
+{"id":3,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0},
+{"id":4,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0}
+]
