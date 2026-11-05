@@ -1,0 +1,48 @@
+name: Build APK (Android)
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Siapkan file game
+        run: |
+          mkdir -p /tmp/app/www
+          rsync -a --exclude '.git' --exclude '.github' --exclude 'Character Stuff' --exclude 'package.json' --exclude 'README.txt' ./ /tmp/app/www/
+
+      - name: Buat project Capacitor Android
+        working-directory: /tmp/app
+        run: |
+          npm init -y
+          npm install @capacitor/core@6 @capacitor/cli@6 @capacitor/android@6
+          npx cap init OniSan com.nashkitwo.onisan --web-dir=www
+          npx cap add android
+          npx cap sync android
+          sed -i 's/<activity/<activity android:screenOrientation="landscape"/' android/app/src/main/AndroidManifest.xml
+
+      - name: Build APK
+        working-directory: /tmp/app/android
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleDebug --no-daemon
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: OniSan-apk
+          path: /tmp/app/android/app/build/outputs/apk/debug/app-debug.apk
